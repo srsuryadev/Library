@@ -5,6 +5,11 @@
  */
 package librarysystem;
 
+import Database.DbInitializer;
+import java.sql.SQLException;
+import javax.swing.JFrame;
+import librarysystem.UI.BookEdit;
+
 /**
  *
  * @author suryadev
@@ -14,8 +19,14 @@ public class LibrarySystem {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ClassNotFoundException, SQLException {
         // TODO code application logic here
+        
+        DbInitializer db = new DbInitializer();
+        db.createTables();
+        JFrame bookEdit = new BookEdit();
+        bookEdit.setVisible(true);
+        
     }
     
 }
