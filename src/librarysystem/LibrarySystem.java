@@ -9,6 +9,9 @@ import Database.DbInitializer;
 import java.sql.SQLException;
 import javax.swing.JFrame;
 import librarysystem.UI.BookEdit;
+import librarysystem.UI.Home;
+import librarysystem.UI.HomePage;
+import librarysystem.UI.MemberBookUI;
 
 /**
  *
@@ -24,9 +27,12 @@ public class LibrarySystem {
         
         DbInitializer db = new DbInitializer();
         db.createTables();
-        JFrame bookEdit = new BookEdit();
-        bookEdit.setVisible(true);
-        
+     //   JFrame bookEdit = new BookEdit();
+     //   bookEdit.setVisible(true);
+      //  JFrame mb = new MemberBookUI();
+      //  mb.setVisible(true);
+        JFrame h = new HomePage();
+        h.setVisible(true);
     }
     
 }

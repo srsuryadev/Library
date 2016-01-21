@@ -55,16 +55,27 @@ public class DbInitializer {
                    " bookimage VARCHAR(255), " +
                    " PRIMARY KEY ( bookid ))";
    
-    //  String checkSql = "SELECT COUNT(*) FROM `tableName`";
-      int count; 
+       
+     String sql1 = "CREATE TABLE MEMBERBOOK "+
+                   "( memberid INTEGER,"+
+                      "bookid INTEGER,"+
+             "datetaken DATE,"+
+             "expectedate DATE,"+
+              "fine INTEGER"
+             + ")";
+      int count;
   //    ResultSet rs = stmt.executeQuery(checkSql);
       count = 1; 
       if(count == 0){
         stmt.executeUpdate(sql);
+         stmt.executeUpdate(sql1);
         System.out.println("Created table in given database...");
       }
       else{
-        System.out.println("Tables already Exists");
+          
+         
+          System.out.println("Member table added!");
+          System.out.println("Tables already Exists");
       }
       
        
